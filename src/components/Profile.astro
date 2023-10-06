@@ -30,20 +30,13 @@
     #profile {
         display: flex;
         justify-content: center;
-        gap: 5rem;
-        height: fit-content;
+        gap: clamp(1px, 1rem, 5rem);
+        height: clamp(80vh, 80vh, 84vh);
         flex-wrap: wrap;
     }
 
     #profile-image {
         border-radius: 50%;
-    }
-
-    .section__pic-container {
-        display: flex;
-        height: 400px;
-        width: 400px;
-        margin: auto 0;
     }
 
     .section__text {

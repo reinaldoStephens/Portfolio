@@ -56,6 +56,9 @@ const { title } = Astro.props as Props;
 
             .section-container {
                 display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
             }
 
             /* Icons */
@@ -179,6 +182,12 @@ const { title } = Astro.props as Props;
                 font-size: 1.5rem;
             }
 
+            .section__pic-container {
+                display: flex;
+                height: clamp(20%, 40vh, 400px);
+                width: clamp(20%, 40vh, 400px);
+            }
+
             @media screen and (max-width: 1200px) {
                 #desktop-nav {
                     display: none;
@@ -191,17 +200,9 @@ const { title } = Astro.props as Props;
                 #hamburger-nav {
                     display: none;
                 }
-                #profile {
-                    height: fit-content;
-                    margin-bottom: 150px;
-                }
             }
 
             @media screen and (max-width: 1400px) {
-                #profile {
-                    height: fit-content;
-                    margin-bottom: 150px;
-                }
                 .about-containers {
                     flex-wrap: wrap;
                 }
@@ -214,7 +215,7 @@ const { title } = Astro.props as Props;
                 }
                 #profile,
                 .section-container {
-                    display: block;
+                    display: flex;
                 }
                 .arrow {
                     display: none;
@@ -226,11 +227,6 @@ const { title } = Astro.props as Props;
                 section {
                     margin: 0 5%;
                 }
-                .section__pic-container {
-                    width: 275px;
-                    height: 275px;
-                    margin: 0 auto 2rem;
-                }
                 .about-containers {
                     margin-top: 0;
                 }
@@ -240,10 +236,6 @@ const { title } = Astro.props as Props;
                 #contact,
                 footer {
                     height: 40vh;
-                }
-                #profile {
-                    height: 83vh;
-                    margin-bottom: 0;
                 }
                 article {
                     font-size: 1rem;
@@ -276,8 +268,6 @@ const { title } = Astro.props as Props;
                     text-align: center;
                 }
                 .section__pic-container {
-                    width: auto !important;
-                    height: min-content;
                     justify-content: center;
                 }
                 .section__text__p2 {
@@ -287,7 +277,7 @@ const { title } = Astro.props as Props;
                     font-size: 2rem;
                 }
                 .text-container {
-                    text-align: justify;
+                    text-align: left;
                 }
             }
         </style>
